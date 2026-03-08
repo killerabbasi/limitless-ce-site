@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+/* ============================================
+   LIMITLESS ON DEMAND — THEME (Light)
+   ============================================ */
+
+@theme {
+  /* Light foundations — warm off-white with rhythm */
+  --color-brand-dark: #F0EDE7;
+  --color-brand-dark-2: #E8E4DD;
+  --color-brand-dark-3: #DDD9D1;
+
+  /* Dark sections (Hero, Footer, FinalCTA) */
+  --color-section-dark: #212121;
+  --color-section-dark-2: #2a2a2a;
+
+  /* Brand green — exact match from limitlessce.com */
+  --color-brand-green: #5B6854;
+  --color-brand-green-light: #7A8B6F;
+  --color-brand-green-dark: #465240;
+  --color-brand-accent: #5B6854;
+
+  /* Surface */
+  --color-surface: #F0EEE9;
+
+  /* Text — dark on light backgrounds */
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #555555;
+  --color-text-muted: #888888;
+
+  /* Borders */
+  --color-border-subtle: rgba(0, 0, 0, 0.08);
+  --color-border-hover: rgba(0, 0, 0, 0.16);
+
+  /* Fonts */
+  --font-heading: 'Raleway', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ---- Base ---- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-brand-dark);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-brand-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-dark-3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-green);
+}
+
+/* ---- Selection ---- */
+::selection {
+  background: rgba(91, 104, 84, 0.25);
+  color: #fff;
+}
+
+/* ---- Focus ---- */
+:focus-visible {
+  outline: 2px solid var(--color-brand-green);
+  outline-offset: 2px;
+}
+
+/* ---- Counter animation ---- */
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
